@@ -135,10 +135,10 @@ $liste_ssCat = $lm->getListe(TABLE_MATOS_CATEG, '*', 'ordre', 'ASC');
 		<div class="inline top center pad3" style="width: 120px;">
 			<div class="ui-widget-header ui-corner-all">Catégorie :</div>
 			<select id="modMatosCateg">
-				<option value="son">SON</option>
-				<option value="lumiere">LUMIÈRE</option>
-				<option value="structure">STRUCTURE</option>
-				<option value="transport">TRANSPORT</option>
+				<option value="bde">BDE</option>
+				<option value="ung">UNG</option>
+				<option value="gala">GALA</option>
+				<option value="s_et_l">SON_LUMIERE</option>
 			</select>
 		</div>
 		<div class="inline top center pad3" style="width: 190px;">

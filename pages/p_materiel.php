@@ -128,19 +128,19 @@ if (!$_SESSION["user"]->isLevelMod()) {
     </div>
 
     <div class="inline top center" id="filtresDiv">
-        <button class="bouton filtre" id="son" title="voir le matos SON">
-            <img src="./gfx/icones/categ-son.png" alt="SON" width="30" />
+        <button class="bouton filtre" id="bde" title="Voir le matos BDE">
+            <img src="./gfx/icones/categ-son.png" alt="BDE" width="30" />
         </button>
-        <button class="bouton filtre" id="lumiere" title="voir le matos LUMIERE">
-            <img src="./gfx/icones/categ-lumiere.png" alt="LUMIERE" width="30" />
+        <button class="bouton filtre" id="ung" title="Voir le matos UNG">
+            <img src="./gfx/icones/categ-lumiere.png" alt="GALA" width="30" />
         </button>
-        <button class="bouton filtre" id="structure" title="voir le matos STRUCTURE">
-            <img src="./gfx/icones/categ-structure.png" alt="STRUCTURE" width="30" />
+        <button class="bouton filtre" id="gala" title="Voir le matos GALA">
+            <img src="./gfx/icones/categ-structure.png" alt="GALA" width="30" />
         </button>
-        <button class="bouton filtre" id="transport" title="voir le matos TRANSPORT">
-            <img src="./gfx/icones/categ-transport.png" alt="TRANSPORT" width="30" />
+        <button class="bouton filtre" id="s_et_l" title="Voir le matos S&L">
+            <img src="./gfx/icones/categ-transport.png" alt="SON_LUMIERE" width="30" />
         </button>
-        <button class="bouton filtre" id="polyvalent" title="voir le matos POLYVALENT">
+        <button class="bouton filtre" id="polyvalent" title="Voir le matos POLYVALENT">
             <img src="./gfx/icones/categ-polyvalent.png" alt="POLYVALENT" width="30" />
         </button>
 

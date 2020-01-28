@@ -23,13 +23,13 @@ else $liste_matos = $l->getListe(TABLE_MATOS, '*', 'label');
 
 <div class="inline top" style="width: 77%;">
 	<div class="marge30l center" id="filtresDetail">
-		<button class="bouton filtreD marge30l" id="son" title="voir le matos SON"><img src="./gfx/icones/categ-son.png" alt="SON" width="30" /></button>
-		<button class="bouton filtreD" id="lumiere" title="voir le matos LUMIERE"><img src="./gfx/icones/categ-lumiere.png" alt="LUMIERE" width="30" /></button>
-		<button class="bouton filtreD" id="structure" title="voir le matos STRUCTURE"><img src="./gfx/icones/categ-structure.png" alt="STRUCTURE" width="30" /></button>
-		<button class="bouton filtreD" id="transport" title="voir le matos TRANSPORT"><img src="./gfx/icones/categ-transport.png" alt="TRANSPORT" width="30" /></button>
-		
+		<button class="bouton filtreD marge30l" id="bde" title="Voir le matos BDE"><img src="./gfx/icones/categ-son.png" alt="BDE" width="30" /></button>
+		<button class="bouton filtreD" id="ung" title="Voir le matos UNG"><img src="./gfx/icones/categ-lumiere.png" alt="UNG" width="30" /></button>
+		<button class="bouton filtreD" id="gala" title="Voir le matos GALA"><img src="./gfx/icones/categ-structure.png" alt="GALA" width="30" /></button>
+		<button class="bouton filtreD" id="s_et_l" title="Voir le matos S&L"><img src="./gfx/icones/categ-transport.png" alt="S&L" width="30" /></button>
+
 		<div class="inline top Vseparator bordSection"></div>
-		
+
 		<button class="bouton filtreD" id="int-ext" title="ne voir que le matos EXTERNE au Parc"><img src="./gfx/icones/matosExterne.png" alt="INT/EXT" width="30"></button>
 	</div>
 	<br />
@@ -43,17 +43,17 @@ else $liste_matos = $l->getListe(TABLE_MATOS, '*', 'label');
 			<th>J'en veux</th>
 			<th>Ajouter</th>
 		</tr>
-		
+
 		<?php
 		if (is_array($liste_matos)) {
 			foreach ($liste_matos as $info) {
-				
+
 				$externeClass = ''; $externeTxt = '';
 				if ($info['externe'] == '1') {
 					$externeClass = 'ui-state-active';
 					$externeTxt = ' (ext)';
 				}
-				
+
 				echo '<tr class="ui-state-default matosLine matosInterne '.$externeClass.' cat-'.$info['categorie'].'">
 						<td>'.$info['ref'].'</td>
 						<td>'.$info['label'].'</td>

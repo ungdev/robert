@@ -54,10 +54,10 @@ $liste_packs = $l->getListe(TABLE_PACKS);
 		<br />
 		<div class="ui-widget-header ui-corner-all">Catégorie :</div>
 		<select id="newMatosCateg">
-			<option value="son">SON</option>
-			<option value="lumiere">LUMIÈRE</option>
-			<option value="structure">STRUCTURE</option>
-			<option value="transport">TRANSPORT</option>
+			<option value="bde">BDE</option>
+			<option value="ung">UNG</option>
+			<option value="gala">GALA</option>
+			<option value="s_et_l">SON_LUMIERE</option>
 		</select>
 	</div>
 	<div class="inline top" style="width: 200px;">

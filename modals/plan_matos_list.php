@@ -14,15 +14,15 @@
 		<button class="inline top bouton" id='add_Matos_Rapide' title="Ajouter un matériel vite fait">
 			<span class="ui-icon ui-icon-plusthick doigt">ajouter</span>
 		</button>
-		
+
 		<div class="inline top Vseparator bordSection"></div>
-		
-		<button class="bouton filtreMatos" id="son" title="voir le matos SON"><img src="./gfx/icones/categ-son.png" alt="SON" width="30" /></button>
-		<button class="bouton filtreMatos" id="lumiere" title="voir le matos LUMIERE"><img src="./gfx/icones/categ-lumiere.png" alt="LUMIERE" width="30" /></button>
-		<button class="bouton filtreMatos" id="structure" title="voir le matos STRUCTURE"><img src="./gfx/icones/categ-structure.png" alt="STRUCTURE" width="30" /></button>
-		<button class="bouton filtreMatos" id="transport" title="voir le matos TRANSPORT"><img src="./gfx/icones/categ-transport.png" alt="TRANSPORT" width="30" /></button>
-		<button class="bouton filtreMatos" id="polyvalent" title="voir le matos POLYVALENT"><img src="./gfx/icones/categ-polyvalent.png" alt="POLYVALENT" width="30" /></button>
-		
+
+		<button class="bouton filtreMatos" id="bde" title="Voir le matos BDE"><img src="./gfx/icones/categ-son.png" alt="BDE" width="30" /></button>
+		<button class="bouton filtreMatos" id="ung" title="Voir le matos UNG"><img src="./gfx/icones/categ-lumiere.png" alt="UNG" width="30" /></button>
+		<button class="bouton filtreMatos" id="gala" title="Voir le matos GALA"><img src="./gfx/icones/categ-structure.png" alt="GALA" width="30" /></button>
+		<button class="bouton filtreMatos" id="s_et_l" title="Voir le matos S&L"><img src="./gfx/icones/categ-transport.png" alt="SON_LUMIERE" width="30" /></button>
+		<button class="bouton filtreMatos" id="polyvalent" title="Voir le matos POLYVALENT"><img src="./gfx/icones/categ-polyvalent.png" alt="POLYVALENT" width="30" /></button>
+
 		<div class="inline top Vseparator bordSection"></div>
 		<div class='inline top'>
 			<button class="bouton filtreMatos" id="int-ext" title="matos INTERNE / EXTERNE au Parc"><img src="./gfx/icones/matosExterne.png" alt="INT/EXT" width="30"></button>
@@ -30,7 +30,7 @@
 	</div>
 	<br />
 	<br />
-	
+
 
 	<div id="packsHolder" class="center shadowOut">
 		<?php
@@ -53,8 +53,8 @@
 							$externeIcon
 						</div>
 						<div class='inline mid matos_categ rightText accordionOpen' style='width:100px;'>
-							<div class='inline mid pack_categ'><img src='gfx/icones/categ-$categPack.png' alt='$categPack' /></div>	
-						</div>							
+							<div class='inline mid pack_categ'><img src='gfx/icones/categ-$categPack.png' alt='$categPack' /></div>
+						</div>
 						<div class='inline mid quart leftText pad30L pack_name accordionOpen'>$label</div>
 						<div class='inline mid quart packDispo rightText mini'>
 							<div class='inline mid qteDispo' style='$externeHideDispo'>
@@ -85,15 +85,15 @@
 			}
 		?>
 	</div>
-	
+
 	<div id="matosHolder" class="center shadowOut gros hide"> <?php
 		include('matos_tri_sousCat.php');
-		
+
 		$matos_by_categ = creerSousCatArray($listeMatos);
 		$categById		= simplifySousCatArray();
-		
+
 //		echo '<pre>'; print_r($matos_by_categ); echo '</pre>';
-		
+
 		if (is_array($matos_by_categ)) {
 			foreach ($categById as $catInfo) {
 				$index = $catInfo['id'];
@@ -111,7 +111,7 @@
 					$ext		= $v['externe'];
 					$extChezQui = $v['ownerExt'];
 
-					$qte -= $panne ; 
+					$qte -= $panne ;
 					( $panne > 0 )? $affichPanne = "<span class='mini red'>(+ $panne en panne)</span>" : $affichPanne = '';
 					( $ext == '1')? $externeIcon = "<img src='gfx/icones/matosExterne.png' alt='externe' popup='matériel externe au parc !<br />A louer chez <b>$extChezQui</b>' />" : $externeIcon = '';
 					( $ext == '1')? $externeClass = "matosExterne" : $externeClass = '';
@@ -149,7 +149,7 @@
 			}
 		}
 	?></div>
-	
+
 	<br />
 	<br />
 </div>
@@ -172,10 +172,10 @@ $liste_ssCat = $lm->getListe(TABLE_MATOS_CATEG);
 	<div class="inline top center pad3" style="width: 140px;">
 		<div class="ui-widget-header ui-corner-all">Catégorie : <b class="red">*</b></div>
 		<select id="newMatosCateg">
-			<option value="son">SON</option>
-			<option value="lumiere">LUMIÈRE</option>
-			<option value="structure">STRUCTURE</option>
-			<option value="transport">TRANSPORT</option>
+			<option value="bde">BDE</option>
+			<option value="ung">UNG</option>
+			<option value="gala">GALA</option>
+			<option value="s_et_l">SON_LUMIERE</option>
 		</select>
 	</div>
 	<div class="inline top center pad3" style="width: 200px;">

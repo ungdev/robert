@@ -12,17 +12,17 @@ require_once ('checkConnect.php' );
 <script>
 	$(function() {
 		$('.bouton').button();
-		
+
 		// highlight des mini sous-menus
 		$('.packsMiniSsMenu').addClass('ui-state-highlight');
 		$('.miniSmenuBtn').removeClass('ui-state-highlight');
 		$('#matos_add_packs').addClass('ui-state-highlight');
 		$('.packsMiniSsMenu').next().children().show(300);
-		
+
 		// on cache le bouton de recherche et les filtres (pas besoin ici)
 		$('#chercheDiv').hide(300);
 		$('#filtresDiv').hide(300);
-		
+
 	});
 </script>
 
@@ -57,10 +57,10 @@ require_once ('checkConnect.php' );
 	<div class="inline top center pad3" style="width: 180px;">
 		<div class="ui-widget-header ui-corner-all">Catégorie : <b class="red">*</b></div>
 		<select id="newPackCateg">
-			<option value="son">SON</option>
-			<option value="lumiere">LUMIÈRE</option>
-			<option value="structure">STRUCTURE</option>
-			<option value="transport">TRANSPORT</option>
+			<option value="bde">BDE</option>
+			<option value="ung">UNG</option>
+			<option value="gala">GALA</option>
+			<option value="s_et_l">SON_LUMIERE</option>
 			<option value="polyvalent">POLYVALENT</option>
 		</select>
 		<br />

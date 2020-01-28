@@ -176,8 +176,8 @@ class SortiePDF {
         $pdf->addLineFormat( $cols );
 
         $y = 108;
-        $qteCateg['son'] = 0; $qteCateg['lumiere'] = 0; $qteCateg['structure'] = 0; $qteCateg['transport'] = 0;
-        $ssTotalCateg['son'] = 0; $ssTotalCateg['lumiere'] = 0; $ssTotalCateg['structure'] = 0; $ssTotalCateg['transport'] = 0;
+        $qteCateg['bde'] = 0; $qteCateg['ung'] = 0; $qteCateg['gala'] = 0; $qteCateg['s_et_l'] = 0;
+        $ssTotalCateg['bde'] = 0; $ssTotalCateg['ung'] = 0; $ssTotalCateg['gala'] = 0; $ssTotalCateg['s_et_l'] = 0;
         $listMatosHT = array(); $totalValRemp = 0; $exclRemiseT = 0; $exclRemiseE = 0;
         foreach($this->retour['matos'] as $infoMatos) {
             $qteMatos = (int)$infoMatos['qte'];
@@ -187,7 +187,7 @@ class SortiePDF {
             $ssTotalCateg[$infoMatos['cat']] += $infoMatos['PU'] * $infoMatos['qte'];
             $totalValRemp += $infoMatos['valRemp'];
             $categories[$infoMatos['cat']] = array('label' => $infoMatos['cat'], 'qte' => $qteCateg[$infoMatos['cat']], 'sstotal' => $ssTotalCateg[$infoMatos['cat']]);
-            if ($infoMatos['cat'] == 'transport')                                                                                            // ICI
+            if ($infoMatos['cat'] == 's_et_l')                                                                                            // ICI
                 $exclRemiseT += $infoMatos['PU'] * $infoMatos['qte'];                                                                                                    // ICI
             if ($infoMatos['ext'] == '1')                                                                                            // ICI
                 $exclRemiseE += $infoMatos['PU'] * $infoMatos['qte'];                                                                                                    // ICI
@@ -425,8 +425,8 @@ class SortiePDF {
         $pdf->addLineFormat( $cols );
 
         $y = 108;
-        $qteCateg['son'] = 0; $qteCateg['lumiere'] = 0; $qteCateg['structure'] = 0; $qteCateg['transport'] = 0;
-        $ssTotalCateg['son'] = 0; $ssTotalCateg['lumiere'] = 0; $ssTotalCateg['structure'] = 0; $ssTotalCateg['transport'] = 0;
+        $qteCateg['bde'] = 0; $qteCateg['ung'] = 0; $qteCateg['gala'] = 0; $qteCateg['s_et_l'] = 0;
+        $ssTotalCateg['bde'] = 0; $ssTotalCateg['ung'] = 0; $ssTotalCateg['gala'] = 0; $ssTotalCateg['s_et_l'] = 0;
         $totalFinal = array(); $totalValRemp = 0; $exclRemiseT = 0; $exclRemiseE = 0;
         foreach($this->retour['matos'] as $infoMatos) {
             $qteMatos = (int)$infoMatos['qte'];
@@ -436,7 +436,7 @@ class SortiePDF {
             $ssTotalCateg[$infoMatos['cat']] += $infoMatos['PU'] * $infoMatos['qte'];
             $totalValRemp += $infoMatos['valRemp'];
             $categories[$infoMatos['cat']] = array('label' => $infoMatos['cat'], 'qte' => $qteCateg[$infoMatos['cat']], 'sstotal' => $ssTotalCateg[$infoMatos['cat']]);
-            if ($infoMatos['cat'] == 'transport')                                                                                            // ICI
+            if ($infoMatos['cat'] == 's_et_l')                                                                                            // ICI
                 $exclRemiseT += $infoMatos['PU'] * $infoMatos['qte'];                                                                                                    // ICI
             if ($infoMatos['ext'] == '1')                                                                                            // ICI
                 $exclRemiseE += $infoMatos['PU'] * $infoMatos['qte'];                                                                                                    // ICI

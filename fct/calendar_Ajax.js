@@ -509,13 +509,13 @@ function montreDetailsPlan (datas) {
 				detailMatosStr += '</div>';
 
 				totalJour += info.prix;
-				if (info.cat == "son")
+				if (info.cat == "bde")
 					ssTotalSon	  += info.prix;
-				else if (info.cat == "lumiere")
+				else if (info.cat == "ung")
 					ssTotalLight  += info.prix;
-				else if (info.cat == "structure")
+				else if (info.cat == "gala")
 					ssTotalStruct += info.prix;
-				else if (info.cat == "transport")
+				else if (info.cat == "s_et_l")
 					ssTotalTransp += info.prix;
 				if (info.ext == 1)
 					ssTotalMatosExt += info.prix;
@@ -550,10 +550,10 @@ function montreDetailsPlan (datas) {
 						+'</div>';
 
 		dialogContent += '<b>SOUS TOTAUX :</b>';
-		if (ssTotalSon != 0) dialogContent += '<div class="rightText">SON : '+ssTotalSon.toFixed(2)+' €</div>';
-		if (ssTotalLight != 0) dialogContent += '<div class="rightText">LUMIÈRE : '+ssTotalLight.toFixed(2)+' €</div>';
-		if (ssTotalStruct != 0) dialogContent += '<div class="rightText">STRUCTURE : '+ssTotalStruct.toFixed(2)+' €</div>';
-		if (ssTotalTransp != 0) dialogContent += '<div class="rightText">TRANSPORT : '+ssTotalTransp.toFixed(2)+' €</div>'
+		if (ssTotalSon != 0) dialogContent += '<div class="rightText">BDE : '+ssTotalSon.toFixed(2)+' €</div>';
+		if (ssTotalLight != 0) dialogContent += '<div class="rightText">UNG : '+ssTotalLight.toFixed(2)+' €</div>';
+		if (ssTotalStruct != 0) dialogContent += '<div class="rightText">GALA : '+ssTotalStruct.toFixed(2)+' €</div>';
+		if (ssTotalTransp != 0) dialogContent += '<div class="rightText">SON_LUMIERE : '+ssTotalTransp.toFixed(2)+' €</div>'
 
 		dialogContent += detailMatosStr;
 	}
